@@ -1,0 +1,238 @@
+{
+    "generated_at": "2026-11-05T17:00:41+00:00",
+    "video_count": 100,
+    "results": [
+        {
+            "customer": {
+                "id": 1,
+                "name": "Alice Johnson",
+                "email": "alice.johnson@example.com",
+                "description": "Loves food videos, especially street food and cooking tutorials."
+            },
+            "recommendations": [
+                {
+                    "video_id": 15,
+                    "title": "Street Vendor Grills Skewers at Night Market",
+                    "url": "https://cdn.example.test/testing/videos/video-15.mp4",
+                    "relevance": 10,
+                    "reason": "This video perfectly matches your interest in street food by featuring a vendor grilling skewers at a night market."
+                },
+                {
+                    "video_id": 55,
+                    "title": "Sushi Chef Slices Fresh Fish at Counter",
+                    "url": "https://cdn.example.test/testing/videos/video-55.mp4",
+                    "relevance": 9,
+                    "reason": "It offers a close look at professional culinary technique as a chef carefully slices fresh fish."
+                },
+                {
+                    "video_id": 5,
+                    "title": "Chef Plates Dessert in Busy Kitchen",
+                    "url": "https://cdn.example.test/testing/videos/video-5.mp4",
+                    "relevance": 8,
+                    "reason": "It showcases detailed food preparation and plating skills in a fast-paced kitchen."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 2,
+                "name": "Ben Carter",
+                "email": "ben.carter@example.com",
+                "description": "Big fan of wildlife videos, particularly big cats and marine life."
+            },
+            "recommendations": [
+                {
+                    "video_id": 31,
+                    "title": "Dolphins Leap Alongside Fishing Boat",
+                    "url": "https://cdn.example.test/testing/videos/video-31.mp4",
+                    "relevance": 9,
+                    "reason": "Features dolphins swimming in the wild, perfectly matching your passion for marine life."
+                },
+                {
+                    "video_id": 64,
+                    "title": "Coral Reef Teems With Colourful Fish",
+                    "url": "https://cdn.example.test/testing/videos/video-64.mp4",
+                    "relevance": 9,
+                    "reason": "Showcases vibrant underwater marine life swimming through a colourful coral reef."
+                },
+                {
+                    "video_id": 61,
+                    "title": "Penguins Waddle Across Antarctic Ice",
+                    "url": "https://cdn.example.test/testing/videos/video-61.mp4",
+                    "relevance": 8,
+                    "reason": "Captures wild penguins on Antarctic ice, highlighting coastal aquatic wildlife."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 3,
+                "name": "Chloe Davis",
+                "email": "chloe.davis@example.com",
+                "description": "Enjoys sports videos, especially football highlights and match analysis."
+            },
+            "recommendations": [
+                {
+                    "video_id": 3,
+                    "title": "Footballers Battle for Ball in Cup Final",
+                    "url": "https://cdn.example.test/testing/videos/video-3.mp4",
+                    "relevance": 10,
+                    "reason": "Features exciting football action during a competitive cup final match."
+                },
+                {
+                    "video_id": 73,
+                    "title": "Rugby Team Celebrates Last Minute Try",
+                    "url": "https://cdn.example.test/testing/videos/video-73.mp4",
+                    "relevance": 7,
+                    "reason": "Showcases high-stakes team sports highlights and dramatic match-winning moments."
+                },
+                {
+                    "video_id": 33,
+                    "title": "Basketball Player Dunks in Championship Game",
+                    "url": "https://cdn.example.test/testing/videos/video-33.mp4",
+                    "relevance": 6,
+                    "reason": "Offers thrilling championship-level sports action for fans of competitive games."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 4,
+                "name": "Daniel Evans",
+                "email": "daniel.evans@example.com",
+                "description": "Interested in travel videos showcasing hidden gems around the world."
+            },
+            "recommendations": [
+                {
+                    "video_id": 36,
+                    "title": "Backpacker Hikes Along Cliffside Trail",
+                    "url": "https://cdn.example.test/testing/videos/video-36.mp4",
+                    "relevance": 9,
+                    "reason": "Captures a backpacker exploring a scenic cliffside trail off the beaten path."
+                },
+                {
+                    "video_id": 16,
+                    "title": "Tourists Explore Ancient Stone Ruins",
+                    "url": "https://cdn.example.test/testing/videos/video-16.mp4",
+                    "relevance": 8,
+                    "reason": "Shows travelers discovering historic stone ruins of an ancient city."
+                },
+                {
+                    "video_id": 76,
+                    "title": "Camel Caravan Crosses Sahara Dunes",
+                    "url": "https://cdn.example.test/testing/videos/video-76.mp4",
+                    "relevance": 8,
+                    "reason": "Showcases a remote travel journey with a camel caravan crossing the Sahara desert."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 5,
+                "name": "Ella Fisher",
+                "email": "ella.fisher@example.com",
+                "description": "Prefers music videos and live concert recordings."
+            },
+            "recommendations": [
+                {
+                    "video_id": 77,
+                    "title": "Crowd Sings Along at Stadium Concert",
+                    "url": "https://cdn.example.test/testing/videos/video-77.mp4",
+                    "relevance": 10,
+                    "reason": "It captures the atmosphere and excitement of a live concert recording at a packed stadium."
+                },
+                {
+                    "video_id": 7,
+                    "title": "Guitarist Performs Solo at Outdoor Festival",
+                    "url": "https://cdn.example.test/testing/videos/video-7.mp4",
+                    "relevance": 9,
+                    "reason": "It shows a live musical solo performance on stage at an outdoor music festival."
+                },
+                {
+                    "video_id": 67,
+                    "title": "Pianist Plays Grand Piano on Stage",
+                    "url": "https://cdn.example.test/testing/videos/video-67.mp4",
+                    "relevance": 8,
+                    "reason": "It features a live musical performance by a pianist on stage under concert lights."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 6,
+                "name": "Finn Gallagher",
+                "email": "finn.gallagher@example.com",
+                "description": "Passionate about motorsport videos, especially Formula 1 races."
+            },
+            "recommendations": [],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 7,
+                "name": "Grace Hall",
+                "email": "grace.hall@example.com",
+                "description": "Enjoys comedy sketch videos and stand-up specials."
+            },
+            "recommendations": [],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 8,
+                "name": "Harry Irwin",
+                "email": "harry.irwin@example.com",
+                "description": "Fascinated by science and space videos, especially astronomy content."
+            },
+            "recommendations": [
+                {
+                    "video_id": 78,
+                    "title": "Astronomer Adjusts Telescope at Observatory",
+                    "url": "https://cdn.example.test/testing/videos/video-78.mp4",
+                    "relevance": 10,
+                    "reason": "Features an astronomer operating a large observatory telescope to study space."
+                },
+                {
+                    "video_id": 98,
+                    "title": "Rocket Launches From Coastal Launchpad",
+                    "url": "https://cdn.example.test/testing/videos/video-98.mp4",
+                    "relevance": 9,
+                    "reason": "Captures a rocket launch into space, representing space exploration and engineering science."
+                },
+                {
+                    "video_id": 48,
+                    "title": "Scientist Examines Sample Under Microscope",
+                    "url": "https://cdn.example.test/testing/videos/video-48.mp4",
+                    "relevance": 7,
+                    "reason": "Shows a scientist conducting microscopic research in a laboratory setting."
+                }
+            ],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 9,
+                "name": "Isla Jenkins",
+                "email": "isla.jenkins@example.com",
+                "description": "Likes fitness and workout videos, especially yoga and home training."
+            },
+            "recommendations": [],
+            "discarded": []
+        },
+        {
+            "customer": {
+                "id": 10,
+                "name": "Jack Kelly",
+                "email": "jack.kelly@example.com",
+                "description": "Enjoys gaming videos, particularly walkthroughs and esports tournaments."
+            },
+            "recommendations": [],
+            "discarded": []
+        }
+    ]
+}
