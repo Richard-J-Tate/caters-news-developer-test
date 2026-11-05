@@ -2,7 +2,7 @@
 
 namespace App\Actions;
 
-use App\Http\Intergrations\Caters\CaterConnector;
+use App\Http\Integrations\Caters\CatersConnector;
 use App\Models\Video;
 use Saloon\Exceptions\SaloonException;
 
@@ -17,34 +17,33 @@ class ImportCatersVideos
     }
 
     /**
-     * Import every video from the Caters API, skipping any whose URL already exists.
+     * Import every video from the Caters API, skipping any whose URL is already stored.
      *
-     * @return array{created: int, skipped: int, error: ?string}
+     * Videos saved before a failure are kept, so the import is safe to re-run.
+     *
+     * @return array{created: int, skipped: int, error: string|null}
      */
     public function handle(): array
     {
         $created = 0;
         $skipped = 0;
 
-        $connector = new CaterConnector(
+        $connector = new CatersConnector(
             config('app.testing_token'),
-            config('app.caters_endpoint'),
+            config('services.caters.url'),
         );
 
         try {
             foreach ($connector->videos() as $video) {
                 $model = Video::firstOrCreate(
                     ['url' => $video['url']],
-                    [
-                        'title' => $video['title'],
-                        'description' => $video['description'] ?? null,
-                    ],
+                    ['title' => $video['title'], 'description' => $video['description'] ?? null],
                 );
 
                 $model->wasRecentlyCreated ? $created++ : $skipped++;
             }
-        } catch (SaloonException $e) {
-            return ['created' => $created, 'skipped' => $skipped, 'error' => $e->getMessage()];
+        } catch (SaloonException $exception) {
+            return ['created' => $created, 'skipped' => $skipped, 'error' => $exception->getMessage()];
         }
 
         return ['created' => $created, 'skipped' => $skipped, 'error' => null];

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Intergrations\Caters\Requests;
+namespace App\Http\Integrations\Caters\Requests;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
-class ListVideoRequest extends Request
+class ListVideosRequest extends Request
 {
     protected Method $method = Method::GET;
 
@@ -17,11 +17,10 @@ class ListVideoRequest extends Request
     }
 
     /**
-     * @return array {page: int}
+     * @return array{page: int}
      */
     protected function defaultQuery(): array
     {
-
         return ['page' => $this->page];
     }
 }

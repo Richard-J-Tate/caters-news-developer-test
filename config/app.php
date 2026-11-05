@@ -124,6 +124,4 @@ return [
     ],
 
     'testing_token' => env('TESTING_TOKEN'),
-
-    'caters_endpoint' => env('CATERS_ENDPOINT', 'https://clipsadmin.catersnews.com/api'),
 ];

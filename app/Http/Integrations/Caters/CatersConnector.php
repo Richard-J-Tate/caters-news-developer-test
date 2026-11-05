@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Intergrations\Caters;
+namespace App\Http\Integrations\Caters;
 
-use App\Http\Intergrations\Caters\Requests\ListVideoRequest;
+use App\Http\Integrations\Caters\Requests\ListVideosRequest;
 use Illuminate\Support\LazyCollection;
 use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
@@ -10,7 +10,7 @@ use Saloon\Http\Response;
 use Saloon\Traits\Plugins\AcceptsJson;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 
-class CaterConnector extends Connector
+class CatersConnector extends Connector
 {
     use AcceptsJson;
     use AlwaysThrowOnErrors;
@@ -31,7 +31,7 @@ class CaterConnector extends Connector
     }
 
     /**
-     * Lazily iterate every video across all pages of the listVideos endpoint.
+     * Lazily walk every page of the listVideos endpoint, yielding one video at a time.
      *
      * @return LazyCollection<int, array{id: int, title: string, description: ?string, url: string}>
      */
@@ -41,7 +41,7 @@ class CaterConnector extends Connector
             $page = 1;
 
             do {
-                $response = $this->send(new ListVideoRequest($page));
+                $response = $this->send(new ListVideosRequest($page));
                 $videos = $response->json('results', []);
 
                 // Yield individually so keys stay sequential across pages;

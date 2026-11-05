@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'caters' => [
+        'url' => env('CATERS_API_URL', 'https://clipsadmin.catersnews.com/api'),
+    ],
+
 ];

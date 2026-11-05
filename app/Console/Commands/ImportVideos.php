@@ -8,7 +8,7 @@ use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 
 #[Signature('videos:import')]
-#[Description('Import videos from the Caters API')]
+#[Description('Import all videos from the Caters listVideos API, skipping any that already exist')]
 class ImportVideos extends Command
 {
     /**
@@ -17,20 +17,21 @@ class ImportVideos extends Command
     public function handle(ImportCatersVideos $importCatersVideos): int
     {
         if (! $importCatersVideos->isConfigured()) {
-            $this->error('You need to configure the Caters connector first (TESTING_TOKEN).');
+            $this->error('No API token configured. Set TESTING_TOKEN in your .env file.');
 
             return self::FAILURE;
         }
 
-        ['created' => $created, 'skipped' => $skipped, 'error' => $error] = $importCatersVideos->handle();
+        $result = $importCatersVideos->handle();
 
-        $this->info("Imported {$created} new video(s), skipped {$skipped} existing.");
-
-        if ($error !== null) {
-            $this->error("Import stopped early: {$error}");
+        if ($result['error'] !== null) {
+            $this->error("Import failed: {$result['error']}");
+            $this->line("Imported {$result['created']} video(s) before the failure.");
 
             return self::FAILURE;
         }
+
+        $this->info("Imported {$result['created']} new video(s), skipped {$result['skipped']} existing.");
 
         return self::SUCCESS;
     }
